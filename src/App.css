@@ -28,11 +28,40 @@ html, body {
 }
 .App .Tree {
   flex: 1;
-  background-color: #282c34;
+  background-color: #efad51;
+}
+
+.ModeChoose {
+  display: flex;
+  justify-content: center;
+}
+
+.App .MainContent {
+  flex: 4;
+  display: flex;
+  flex-direction: column;
+  background-color: azure;
 }
 .App .Preview {
-  flex: 4;
+  height: 100%;
   background-color: azure;
+  position: relative;
+}
+.App .PreviewOver {
+  height: 100%;
+  opacity: 0.5;
+  background-color: rgb(154, 228, 128);
+  position: relative;
+}
+.App .PreviewHint {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.MAItemCanvas {
+  position: absolute;
 }
 
 .App-logo {
