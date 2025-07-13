@@ -1,0 +1,1 @@
+export const chooseModeSelector = (state: any) => state.app.chooseMode

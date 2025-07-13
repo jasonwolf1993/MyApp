@@ -1,4 +1,5 @@
 import { useDrag } from 'react-dnd'
+import React, { useMemo } from 'react'
 
 function MA() {
     const text = '一棵树'
@@ -14,7 +15,7 @@ function MA() {
     
     return (
         <div
-            ref={drag}
+            ref={drag as any}
             style={{
                 opacity: isDragging ? 0.5 : 1,
                 fontSize: 25,
