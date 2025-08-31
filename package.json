@@ -2,7 +2,7 @@
   "name": "my-app",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://jasonwolf1993.github.io/MyApp",
+  "homepage": "https://jasonwolf1993.github.io/MyApp/",
   "dependencies": {
     "@codemirror/lang-javascript": "^6.2.3",
     "@reduxjs/toolkit": "^2.8.2",
