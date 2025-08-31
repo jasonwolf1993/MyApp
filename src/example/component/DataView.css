@@ -21,4 +21,9 @@
 .data-view-charts {
     width: 100%;
     height: 500px;
+    border: 1px solid #e9e9e9;
+}
+
+.ant-message {
+  z-index: 10000!important; /* 提高 message 的层级 */
 }
