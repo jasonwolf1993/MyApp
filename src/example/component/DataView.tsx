@@ -99,17 +99,6 @@ export const DataView = () => {
                 const buffer = await file.arrayBuffer()
                 const workbook = new Workbook();
                 await workbook.xlsx.load(buffer)
-                // 读取excel，数据整理数据为以下格式：
-                // {
-                //     '000007.SZ': {
-                //         '2025-01-02': {
-                //             value: 0.1, // 只保留最新updateTime对应的数据
-                //             updateTime: new Date('2025-01-03 07:25:21'),
-                //         },
-                //         ...
-                //     },
-                //     ...
-                // }
                 const dataArr = []
                 const worksheet = workbook.getWorksheet(1)
                 let isCorret = true
