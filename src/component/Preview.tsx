@@ -1,9 +1,10 @@
 import { useDrop } from 'react-dnd'
-import React, { useRef, useState } from 'react';
+import React, { useEffect, useRef, useState, EffectCallback } from 'react';
 import MAItemCanvas from './MaterialItemCanvas';
 
 export default function Preview() {
     const dropRef = useRef(null)
+    const canvasRef = useRef(null)
     const [MAItems, setMAItems] = useState([])
     const [{ isOver }, drop] = useDrop(() => ({
         accept: 'MaterialItem',
@@ -31,12 +32,23 @@ export default function Preview() {
         drop(dom)
         dropRef.current = dom
     }
-    console.log('MAItems are: ', MAItems)
+    useEffect(() => {
+        const c = canvasRef.current
+        const ctx=c.getContext('2d');
+        ctx.fillStyle='#FF0000';
+        ctx.fillRect(0,0,80,80);
+    //     MAItems.length === 0 ? (
+    //         <div className="PreviewHint">拖动素材到这里</div>
+    //     ) : MAItems.map((element: any) => {
+    //         return <MAItemCanvas text={element.text} pos={element.pos}></MAItemCanvas>
+    //     })
+    })
     return (
         <div
             ref={SetDrop}
             className={isOver ? "PreviewOver" : "Preview"}
         >
+            <canvas ref={canvasRef} width="500" height="300" style={{position: "absolute", width: 500, height: 300}} />
             {MAItems.length === 0 ? (
                 <div className="PreviewHint">拖动素材到这里</div>
             ) : MAItems.map((element: any) => {

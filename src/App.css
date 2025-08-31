@@ -6,19 +6,24 @@ html, body {
   /* text-align: center; */
   height: 100%;
   width: 100%;
-  display: flex;
-  flex-direction: column;
+  /* display: flex;
+  flex-direction: column; */
 }
 
 .App .Head {
   /* flex: 2; */
-  width: 100%;
+  /* width: 100%;
   height: 100px;
   font-size: 50px;
   display: flex;
   justify-content: center;  
   align-items: center;
-  background-color: #61dafb;
+  background-color: #61dafb; */
+    width: 20px;
+    height: 20px;
+    border-left: 20px solid #3498db;
+    border-right: 20px solid #3498db;
+    border-bottom: 30px solid #2eb31a;
 }
 .App .Content {
   flex: 8;
